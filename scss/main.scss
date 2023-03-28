@@ -1,0 +1,49 @@
+@import './config';
+@import './header';
+@import './landing';
+
+
+.backgraoun {
+    position: absolute;
+    @include chiled(100%, 100%);
+    background-color: $body-color;
+    z-index: -100;
+    overflow: hidden;
+
+    .fa-react {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        font-size: 35rem;
+        z-index: -1000;
+        color: $main-color;
+        animation: react 120s infinite alternate;
+    }
+
+    .fa-star-of-life {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        font-size: 35rem;
+        z-index: -1000;
+        color: $main-color;
+        // animation: react 120s infinite alternate;
+        display: none;
+    }
+
+
+
+
+}
+
+@keyframes react {
+    0% {
+        transform: rotate(0deg);
+        left: 00%;
+        top: 0%;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        left: 30%;
+        top: 30%;
+    }
+}
