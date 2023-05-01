@@ -42,6 +42,7 @@ main {
   position: relative;
   letter-spacing: 1.5px;
   color: white;
+  overflow: hidden;
 }
 main small {
   font-size: 20px;

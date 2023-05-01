@@ -1,7 +1,49 @@
 @import './config';
 @import './header';
 @import './landing';
+@import './scroll.scss';
 
+
+.hed {
+    opacity: 0;
+    filter: blur(20px);
+    transition: all 3.5s;
+    transition-delay: 1.5s;
+}
+
+
+
+
+.heden-r {
+    opacity: 0;
+    transform: translateX(200%);
+    filter: blur(20px);
+    transition: all 1.5s;
+    transition-delay: 0.5s;
+}
+
+.heden-l {
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(20px);
+    transition: all 1.5s;
+    transition-delay: 1s;
+}
+
+.heden-e {
+    opacity: 0;
+    transform: translateY(1000%);
+    filter: blur(20px);
+    transition: all 1.5s;
+    transition-delay: 1.5s;
+}
+
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0px);
+}
 
 .backgraoun {
     position: absolute;

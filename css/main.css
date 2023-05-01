@@ -71,7 +71,7 @@ button {
   width: 50px;
   height: 40px;
   padding: 0;
-  z-index: 100000;
+  z-index: calc(infinity);
 }
 @media (min-width: 992px) {
   .btn {
@@ -211,6 +211,12 @@ nav .list .nav-list .link:hover {
     padding-top: 10px;
   }
 }
+@media (min-width: 992px) {
+  nav {
+    z-index: 10000000000000000;
+    max-height: 20vh;
+  }
+}
 
 .dark {
   position: absolute;
@@ -220,6 +226,7 @@ nav .list .nav-list .link:hover {
   top: -100vh;
   left: 0%;
   transition: 0.6s all;
+  z-index: -1000000000000000000;
 }
 .dark.open {
   top: 0vh;
@@ -235,7 +242,7 @@ nav .list .nav-list .link:hover {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
-  left: 25%;
+  left: 35%;
   height: 500px;
   width: 500px;
   display: inline-block;
@@ -253,6 +260,7 @@ nav .list .nav-list .link:hover {
 }
 .moon.open {
   visibility: visible;
+  z-index: -10;
 }
 .moon.open .fa-moon {
   opacity: 1;
@@ -302,6 +310,7 @@ main {
   position: relative;
   letter-spacing: 1.5px;
   color: white;
+  overflow: hidden;
 }
 main small {
   font-size: 20px;
@@ -344,6 +353,43 @@ main h3 {
 
 .z-in {
   z-index: -100 !important;
+}
+
+.hed {
+  opacity: 0;
+  filter: blur(20px);
+  transition: all 3.5s;
+  transition-delay: 1.5s;
+}
+
+.heden-r {
+  opacity: 0;
+  transform: translateX(200%);
+  filter: blur(20px);
+  transition: all 1.5s;
+  transition-delay: 0.5s;
+}
+
+.heden-l {
+  opacity: 0;
+  transform: translateX(-100%);
+  filter: blur(20px);
+  transition: all 1.5s;
+  transition-delay: 1s;
+}
+
+.heden-e {
+  opacity: 0;
+  transform: translateY(1000%);
+  filter: blur(20px);
+  transition: all 1.5s;
+  transition-delay: 1.5s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0px);
 }
 
 .backgraoun {

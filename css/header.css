@@ -38,7 +38,7 @@ button {
   width: 50px;
   height: 40px;
   padding: 0;
-  z-index: 100000;
+  z-index: calc(infinity);
 }
 @media (min-width: 992px) {
   .btn {
@@ -178,6 +178,12 @@ nav .list .nav-list .link:hover {
     padding-top: 10px;
   }
 }
+@media (min-width: 992px) {
+  nav {
+    z-index: 10000000000000000;
+    max-height: 20vh;
+  }
+}
 
 .dark {
   position: absolute;
@@ -187,6 +193,7 @@ nav .list .nav-list .link:hover {
   top: -100vh;
   left: 0%;
   transition: 0.6s all;
+  z-index: -1000000000000000000;
 }
 .dark.open {
   top: 0vh;
@@ -220,6 +227,7 @@ nav .list .nav-list .link:hover {
 }
 .moon.open {
   visibility: visible;
+  z-index: -10;
 }
 .moon.open .fa-moon {
   opacity: 1;
